@@ -8,8 +8,7 @@ CYAN    := \033[0;36m
 WHITE   := \033[0;37m
 RESET   := \033[0m
 
-SOURCES	=	main.cpp\
-			Span.cpp
+SOURCES	=	main.cpp
 
 OBJS	=	$(SOURCES:.cpp=.o)
 
