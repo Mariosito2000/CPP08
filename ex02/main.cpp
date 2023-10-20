@@ -16,6 +16,7 @@ int main()
 	mstack.push(5);
 	mstack.push(737);
 	mstack.push(0);
+	mstack.push(1);
 
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
@@ -34,6 +35,25 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
+
+	MutantStack<int>::reverse_iterator rit = mstack.rbegin();
+	MutantStack<int>::reverse_iterator rite = mstack.rend();
+	std::cout << "\niter test\n\n";
+	std::cout << *rit << std::endl;
+	++rit;
+	std::cout << *rit << std::endl;
+	--rit;
+	std::cout << *rit << std::endl;
+
+	std::cout << "\nsize: " << mstack.size() << std::endl;
+
+	std::cout << "\niterate stack reverse way\n\n";
+	while (rit != rite)
+	{
+		std::cout << *rit << std::endl;
+		++rit;
+	}
+
 	std::stack<int> s(mstack);
 	return 0;
 }
